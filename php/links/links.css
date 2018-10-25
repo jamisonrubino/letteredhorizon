@@ -1,0 +1,78 @@
+h2 {
+  clear: both;
+  margin: 20px 0 0 0;
+}
+
+div.links {
+  margin: 0;
+  padding: 0;
+}
+
+div.link {
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+div.link a, div.link a:visited {
+  color: rgba(20, 85, 115, 0.7);
+}
+
+div.link a:hover, div.link a:active {
+  color: rgba(20, 85, 115, 1);
+}
+
+div.todayLink a {
+  color: rgba(20, 115, 85, 0.7);
+}
+
+div.todayLink a:hover, div.todayLink a:active {
+  color: rgba(20, 115, 85, 1);
+}
+
+div.todayLink a:visited {
+  color: rgba(20, 85, 115, 0.7);
+}
+
+div#addlinks a {
+	padding: 4px;
+}
+
+div.date {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 80px;
+  text-align: right;
+  margin: 0 10px 0 0;
+}
+
+div.body {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 700px;
+}
+
+a.prevnext {}
+
+div#addLinks {}
+
+span#addLink {}
+
+input[type="text"] {
+	width: 250px;
+	padding: 3px 5px;
+	border-radius: 2px;
+	margin: 2px;
+	
+}
+
+input.fetchedTitle {
+	width: 350px;
+}
+
+textarea {
+	margin: 40px 0 10px 0;
+}
+

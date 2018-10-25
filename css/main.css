@@ -1,0 +1,600 @@
+/* MAIN DOCUMENT BODY, BACKGROUND, FONTS, GENERAL */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+  color: rgb(40,40,40);
+  font-family: 'Jaldi', sans-serif;
+/*  font-family: 'Cardo', 'serif'; */
+  font-size: 14px;                  /* (was 14px with cardo) Only instance of font-size 'px' -- 'em' going forward */
+  background: #a0a4ae;
+/* rgb(140,138,137); */
+  margin: 0;
+}
+
+div#doc {}        /* Body background overlay, if desired */
+
+div#body {        /* Main site width, borders, etc */
+  width: 900px;
+  padding: 0;
+  margin: auto;
+  box-shadow: 1px 1px 5px rgba(40,40,40,0.6);
+}
+
+.nodisplay {
+  display: none;
+}
+
+.noopacity {
+  opacity: 0;
+}
+
+/* DOCUMENT HEADER, LOGO, BANNER */
+
+header {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+div#banner {
+	background: linear-gradient(to bottom, rgba(40,40,40,0.6), rgba(40,40,40,0.9));
+	padding: 20px 0 15px;
+}
+
+div#banner h1 {
+	font-size: 3em;
+	font-weight: 700;
+	margin: 0 0 0 25px;
+	cursor: default;
+	display: inline-block;
+}
+
+div#banner div#tagline {
+	background-color: #222;
+	box-shadow: inset 0 0 7px #1a1a1a;
+	display: inline-block;
+	padding: 4px 12px;
+	margin: 0 0 0 25px;
+	vertical-align: 5px;
+}
+
+div#banner div#tagline span {
+	font-size: 1.3em;
+	font-weight: 700;
+	cursor: default;
+}
+
+div#banner h1, div#banner span {
+	color: rgb(40,40,40);
+}
+
+div#banner a {
+	display: block;
+	width: 420px;
+	height: 65px;
+	background-image: url('../img/LetteredHorizon2-3.png');
+	background-size: 420px 65px;
+	overflow: auto;
+	margin: 0 0 0 32px;
+}
+
+div#body {
+	position: relative;
+}
+
+/* DOCUMENT NAVIGATION */
+
+#navbg {
+	background: rgba(40,40,40,0.9);
+	padding: 0 0 15px;
+}
+
+nav {
+	width: 100%;
+	background: rgb(220,220,220);
+	padding: 0;
+	margin: 0;
+	position: relative;
+	border-width: 2px 0;
+	border-style: solid;
+	border-color: darkgoldenrod;
+	overflow: auto;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0 0 0 17px;
+	background: #222;
+  /* background: rgb(40,40,40); */
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a:link, nav ul li a:visited {
+  padding: 0 15px 0;
+	background: #222;
+/*  background: rgb(40,40,40); */
+  text-decoration: none;
+  color: darkgoldenrod;
+  font-size: 1.3em;
+}
+
+/*
+nav ul li:last-child a {
+  color: gold;
+}
+*/
+
+nav ul li a.post {
+  color: gold;
+  background: radial-gradient(at top left, rgba(145,143,120, 1), rgba(145,143,120,0) 50%);
+}
+
+nav ul li a:hover, nav ul li a:active, nav ul li a.selected {
+  color: lemonchiffon;
+}
+
+header.scrolled nav {
+	position: fixed;
+	top: 0;
+}
+
+header.scrolled #navbg {
+	padding: 0;
+}
+
+
+/* DOCUMENT MAIN BODY CONTENT, BELOW NAVIGATION AND BEFORE FOOTER */
+
+div#main {
+  background: #fcfcf8;
+		/*  url('../img/mainbg1.jpg') repeat */
+  padding: 25px;
+  font-size: 1.2em;
+  color: rgb(40,40,40);
+  overflow: overlay;
+  position: relative;
+}
+
+div#main div h2 {
+}
+
+
+/* MAIN BODY POSTS */
+
+#home, #health, #money, #earth, #society, #tech {
+  position: relative;
+  overflow: visible;
+}
+
+div.entries, div.news {
+	float: left;
+	display: inline-block;
+	position: relative;
+}
+
+/*
+div.entries {
+	width: 55%;
+}
+
+div.news {
+	width: 30%;
+}
+*/
+
+.page-title {
+	/* width: 100%;
+	padding: 0 0 0 15%;
+	background: rgba(184, 134, 11, 0.3);
+	border-bottom: 3px solid rgb(184, 134, 11); */
+
+	width: calc(100% + 50px);
+	padding: 0 0 0 calc(15% + 25px);
+	background: rgba(184, 134, 11, 0.13);
+	border-bottom: 3px solid rgba(184, 134, 11,0.5);
+	margin: -10px -25px 25px;
+	color: darkgoldenrod;
+	text-shadow: 0 0 12px #fff;
+	box-shadow: 0 0 7px 1px #bbb;
+}
+
+div.entry, div.pseudoentry {
+	position: relative;
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+div.pseudoentry {
+	width: 100%;
+}
+
+div.author {
+	width: 15%;
+	min-width: 100px;
+	display: inline-block;
+	float: left;
+	/* margin: 0 15px 0 0; */
+	padding-right: 15px;
+	text-align: right;
+	color: rgba(40,40,40,0.7);
+	font-size: 0.8em;
+}
+
+div.author span.time {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+div.author span.tags {
+  font-size: 0.9em;
+}
+
+/* DARKGOLDENROD: rgb(184, 134, 11)
+ 	 Blue-Green: rgb(11, 184, 134)
+	 Red-Green: rgb(134, 184, 11)
+	 Green-Blue: rgb(11, 134, 184)
+	 Blue-Purple: rgb(134, 11, 184)
+	 Red-Purple: rgb(184, 11, 134)
+	 */
+
+
+div.entry:not(.resource) h2, div.pseudoentry h2 {
+	/*background: rgba(184,48,11, 1);*/
+	/*background-size: 100% 50%;*/
+	/*background-position: 0 auto;*/
+	/*background: linear-gradient(to top, rgba(184,48,11,1) 35%, rgba(184,48,11,0.9));*/
+	padding: 0 15px;
+	background: rgba(184, 134, 11, 0.3);
+	border-bottom: 3px solid rgb(184, 134, 11);
+	/*border: 2px solid rgba(147,38,8,1);*/
+	/*color: rgba(255,255,255,0.93);*/
+	/*color: rgba(184,48,11,1);*/
+	color: #313;
+}
+
+div.pseudopost {
+	position: relative;
+}
+/*
+div.pseudopost::before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 20px;
+  right: 0;
+  bottom: 24px;
+  background: rgb(184,48,11);
+}*/
+
+div.entry:not(.resource) h3, div.pseudoentry h3 {
+/*	background: rgba(150, 148, 158, 0.4); */
+	background: rgba(240,49,49,0.1);
+	border-left: 3px solid rgb(184,48,11);
+	padding: 0 15px;
+	margin: 0;
+	/*border-radius: 3px 3px 0 3px;*/
+}
+
+div.entry h4 {
+	margin: 15px 25px 10px;
+	font-size: 1.2em;
+}
+
+div.post, div.pseudopost {
+	min-width: 450px;
+	display: inline-block;
+	float: left;
+	width: 85%;
+}
+
+
+div.post a.showmore, div.pseudopost a.showmore {
+  font-size: 0.9em;
+  color: gold;
+  text-decoration: none;
+  padding: 2px 5px;
+  background: rgba(40,40,40,0.7);
+  border: 1px solid rgba(40,40,40.1);
+  border-radius: 2px;
+}
+
+
+
+div.post a, div.pseudopost a {
+	font-size: 1em;
+	color: #313;
+	background: rgba(134,11,184,0.1);
+/*	background: #eaeff8; */
+	text-decoration: none;
+	transition: color 0.6s, background 0.6s;
+	padding: 0 5px;
+}
+
+div.post a:not(.linksnext):not(.linksprev):visited, div.pseudopost a:not(.linksnext):not(.linksprev):visited {
+	color: darkgoldenrod;
+	transition: color 0.6s, background 0.6s;
+}
+
+div.post a:not(.linksnext):not(.linksprev):hover, div.pseudopost a:not(.linksnext):not(.linksprev):hover {
+	color: #000 !important;
+	background: rgba(134,11,184,0.3) !important;
+	/*background: #fcfcf8;*/
+}
+
+div.post a:not(.linksnext):not(.linksprev):active, div.pseudopost a:not(.linksnext):not(.linksprev):active {
+	/*color: rgb(240,49,49);*/
+	background: rgba(184,48,11,0.6) !important;
+	/*background: #fcfcf8;*/
+}
+
+p.postbody {
+	display: inline-block;
+	overflow: auto;
+	padding: 15px;
+	margin: 0;
+	text-indent: 25px;
+
+}
+
+
+
+div.links {
+	margin: 0 0 10px 0;
+	padding: 0 0 0 25px;
+	position: relative;
+}
+
+h2 {
+	margin: 0 0 8px 0;
+}
+
+h3 {
+  margin: 0 0 8px 0;
+}
+
+/* POST (NOT LINKS) PREV/NEXT BUTTONS */
+
+#prevnext {
+  position: absolute;
+  right: 25;
+  bottom: 0;
+}
+
+#prevnext a {
+  padding: 4px 7px;
+  margin: 0 0 0 20px;
+  font-size: .8em;
+  font-weight: 700;
+  color: gold;
+  text-decoration: none;
+  background: rgba(40,40,40,0.8);
+  border: 1px solid rgba(40,40,40,0.1);
+  border-radius: 2px;
+}
+
+#prevnext a.prevnext-disabled {
+  color: rgba(184,134,11,0.4);
+  cursor: default;
+}
+
+/* LINKS (NOT POST) PREV/NEXT BUTTONS */
+
+.linksprevnext a.linksprev {
+	display: block;
+	position: absolute;
+	left: -165px;
+	top: calc(50% - 40px);
+/*	width: 25px;
+	height: 50px; */
+	padding: 15px 12px 15px 12px;
+	background: rgba(162, 156, 226, 0.25);
+/*	background: rgb(211,208,223); */
+	vertical-align: text-top;
+	z-index: 3;
+	border-radius: 0 4px 4px 0;
+	transition: opacity 0.5s;
+	opacity: 0.7;
+}
+
+.linksprevnext a.linksnext {
+	display: block;
+	position: absolute;
+	right: -40px;
+	top: calc(50% - 40px);
+/*	width: 25px;
+	height: 50px; */
+	padding: 15px 12px 15px 12px;
+	background: rgba(162, 156, 226, 0.25);
+/*	background: rgb(211,208,223); */
+	z-index: 3;
+	border-radius: 4px 0 0 4px;
+	opacity: 0.7;
+	transition: background 0.5s, opacity 0.5s;
+}
+
+.linksprevnext a.linksprev:not(.disabled):hover, .linksprevnext a.linksnext:not(.disabled):hover {
+	background: rgba(162, 156, 226, 0.4);
+/*	background: rgb(211,208,223); */
+	opacity: 1;
+}
+
+.linksprevnext a.disabled:hover {
+	cursor: default;
+	background: rgba(162, 156, 226, 0.25);
+	opacity: 0.7;
+}
+
+/* REGISTER AND LOGIN FORMS */
+
+/* label {
+  width: 100px;
+  width: 100px;
+  clear: left;
+  text-align: right;
+  padding: 0 10px 0 0;
+} */
+
+/* label, input[type=text], input[type=password], input[type=email] {
+  float: left;
+} */
+
+form {
+  margin: 0 0 0 -2px;
+  padding: 0 0 0 2px;
+  overflow: auto;
+}
+
+textarea {
+  background: rgba(248,248,240,0.5);
+  border: 1px solid rgba(30,30,30,0.2);
+  border-radius: 2px;
+  font-size: 1em;
+  width: 100%;
+}
+
+textarea:focus {
+  background: rgba(252,252,244,1);
+  border: 1px solid rgba(30,30,30,0.8);
+
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 200px;
+  display: inline-block;
+  float: left;
+  clear: left;
+  border: 1px solid rgba(30,30,30,0.2);
+  border-radius: 2px;
+  background: rgba(248,248,240,0.5);
+  font-size: 1.1em;
+  /*font-family: 'Cardo', 'serif';*/
+  padding: 3px 7px;
+  margin: 0 0 10px 0;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  border: 1px solid rgba(30,30,30,0.8);
+  background: rgba(252,252,244,1);
+  color: rgba(40,40,40,1);
+}
+
+#userpost input[type=text] {
+  width: 400px;
+}
+
+input[type=submit] {
+  display: inline-block;
+  margin: 0;
+  float: right;
+  clear: left;
+  padding: 4px 12px;
+  font-size: 1em;
+  background: rgba(40,40,40,0.85);
+  border: 1px solid rgba(40,40,40,1);
+  color: gold;
+  border-radius: 2px;
+}
+
+form[name=login] input[type=submit],
+form[name=activation] input[type=submit],
+form[name=register] input[type=submit] {
+	float: left !important;
+}
+
+input[type=submit]:disabled {
+  color: darkgoldenrod;
+}
+
+label {
+  padding: 0;
+  margin: 0;
+}
+
+form#post_form select {
+	float: left;
+	clear: both;
+	padding: 5px 9px;
+	margin: 10px 0;
+}
+
+button.delete-button {
+	float: left;
+	background: #c44;
+	color: lemonchiffon;
+	padding: 5px 9px;
+	border: 2px solid #e66;
+}
+
+/* SUCCESS AND FAILURE CLASSES */
+
+form span {
+  display: inline-block;
+  float: left;
+  clear: right;
+  padding: 2px 10px;
+  margin: 0 0 10px 10px;
+  font-size: 0.92em;
+  border-radius: 2px;
+}
+
+.failure {
+  background: linear-gradient(to bottom, rgba(179, 20, 20, 0.08), rgba(179,20,20,0.12));
+  color: rgb(179, 20, 20);
+}
+
+.success {
+  background: linear-gradient(to bottom, rgba(20, 179, 20, 0.15), rgba(20, 179, 20, 0.19));
+  color: rgb(15, 100, 50);
+}
+
+.note {
+  background: linear-gradient(to bottom, rgba(20, 20, 179, 0.14), rgba(20,20,179,0.18));
+  color: rgba(20,20,100);
+}
+
+#alert {
+    padding: 3px 10px 3px 25px;
+    margin: -10px -25px 25px;
+    box-shadow: 0 0 3px 0;
+}
+
+/*span#usernameAvailable, span#usernameUnavailable {
+  padding: 10px;
+  border-radius: 2px;
+}
+
+span#usernameAvailable {
+  border: 1px solid rgba(60,100,60,0.8);
+  background: rgba(200, 240, 200, 0.8);
+}
+
+span#usernameUnavailable {
+  border: 1px solid rgba(100,60,60,0.8);
+  background: rgba(240, 200, 200, 0.8);
+}*/
+
+
+/* DOCUMENT AD SPACE */
+
+div#ads {}
+
+
+/* DOCUMENT FOOTER */
+
+footer {
+  padding: 15px 0 15px 25px;
+  background: #252525;
+  color: rgba(220,210,205,0.6);
+}
